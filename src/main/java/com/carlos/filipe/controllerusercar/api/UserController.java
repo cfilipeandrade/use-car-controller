@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @PostMapping("/{usuarioId}/veiculo")
-    @ResponseStatus(HttpStatus.CREATED) //Status 201 Created
+    @ResponseStatus(HttpStatus.CREATED)
     public CarDTO addCar(@Validated @RequestBody Car car, @PathVariable("userId") Long id) {
         return carService.add(car, id);
     }

@@ -4,6 +4,7 @@ import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -30,6 +31,7 @@ public class User {
     @NotNull(message = "{use.name.notNull}")
     String name;
 
+    @Email
     @Column(name = "email", nullable = false)
     @NotNull(message = "{use.email.notNull}")
     String email;
